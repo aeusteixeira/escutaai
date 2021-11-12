@@ -1,66 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Olá!
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Me chamo Matheus Teixeira, moro em Nova Iguaçu, Rio de Janeiro, e trabalho com o desenvolvimento de sites/sistemas. Além disso, sou um completo amante da música brasileira. 
 
-## About Laravel
+Nesses últimos meses, tenho consumindo muitos artistas/bandas independentes. Depois que conheço um artista/banda sempre procuro ter um entendimento mais profundo da história dessa(s) pessoa(s).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Depois de conhecer vários artistas diferentes, percebi que a maioria deles não tinha um site próprio. Alguns possuem apenas Instagram e no máximo uma página no LinkTree.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Dando um exemplo pessoal, tanto eu quanto meus amigos, gostamos de buscar informações como biografia, agenda de shows, loja online etc, e encontrar todas essas informações espalhadas no feed a bela de uma caça ao tesouro. A partir disso comecei a pensar em como eu poderia ajudar as bandas que ouço e as quais um dia ouvirei a terem o seu próprio site de forma gratuita.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A ideia que estou a desenvolver é uma plataforma totalmente gratuita, no qual qualquer artista ou banda independente possa se cadastrar e partir do cadastro, a própria plataforma irá gerar um site no qual a banda ou artista poderá disponibilizar suas informações para seus ouvintes.
 
-## Learning Laravel
+Sendo assim, para viabilizar essa proposta considero ser importante entender a realidade dos artistas/bandas e quais recursos a plataforma pode ter para ajudar a sua música chegar a mais ouvintes. 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Para isso, formulei algumas questões que contribuirão para o melhor desenvolvimento da plataforma. Reforço que é de grande importância o preenchimento completo do formulário.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Qualquer dúvida estou à disposição através do e-mail: contato@matheusteixeira.com.br
 
-## Laravel Sponsors
+Muito obrigado!
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Perguntas
+1 - Qual é o seu nome?
+2 - Qual é o seu nome artístico / nome da sua banda?
+3 - Você é um artista solo ou uma banda?
+	a - Artista solo 
+	b - Banda
+4 - Quais desses itens  que você considera ser importante ter na primeira página do seu site?
+- Foto da banda/artista
+- Seção sobre banda/artista
+- Redes sociais
+- Agenda
+- Itens da loja 
+- Curiosidades
+- Formulário de contato
 
-### Premium Partners
+5 - Quais outros seções do site você acha que seriam importantes ter na primeira página do seu site?
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+6 - Quais dessas páginas você acha interessante ter em seu site
+- 
 
-## Contributing
+10 - Você teria interesse em fazer parte do projeto assim que a primeira versão da plataforma for ao ar?
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
