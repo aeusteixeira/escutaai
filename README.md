@@ -48,7 +48,7 @@ Muito obrigado!
 -- resume
 -- image
 -- subdomain
--- type ['solo', 'band']
+-- type ['soloist', 'band']
 -- number_of_members [min:2]
 
 - users
@@ -58,7 +58,7 @@ Muito obrigado!
 -- image
 -- password
 
-- type_of _members
+- type_of_members
 -- name [
     'vocalist',
     'guitarist',
