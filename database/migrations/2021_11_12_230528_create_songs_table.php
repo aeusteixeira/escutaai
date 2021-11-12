@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMusicHasMembersTable extends Migration
+class CreateSongsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateMusicHasMembersTable extends Migration
      */
     public function up()
     {
-        Schema::create('music_has_members', function (Blueprint $table) {
+        Schema::create('songs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('music_id');
-            $table->unsignedBigInteger('member_id');
-
-            $table->foreign('music_id')->references('id')->on('musics');
-            $table->foreign('member_id')->references('id')->on('users');
-
+            $table->string('title');
+            $table->string('image');
+            $table->string('description');
+            $table->time('duration');
+            $table->unsignedBigInteger('album_id');
+            $table->foreign('album_id')->references('id')->on('albums');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateMusicHasMembersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('music_has_members');
+        Schema::dropIfExists('Song');
     }
 }

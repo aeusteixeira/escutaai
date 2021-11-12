@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class MusicSeeder extends Seeder
+class SongSeeder extends Seeder
 {
     /**
      * Run the database seeds.

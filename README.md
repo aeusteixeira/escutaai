@@ -99,15 +99,15 @@ Muito obrigado!
 -- year
 -- artist_id
 
-- musics
+- Songs
 -- title
 -- image
 -- description
 -- duration
 -- album_id
 
-- music_has_members
--- music_id
+- Song_has_members
+-- Song_id
 -- member_id
 -- type [
     'performed',
@@ -115,8 +115,8 @@ Muito obrigado!
     'produced'
 ]
 
-- music_has_likes
--- music_id
+- Song_has_likes
+-- Song_id
 -- fan_id
 
 - comments

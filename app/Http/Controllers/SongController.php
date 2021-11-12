@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Music;
+use App\Models\Song;
 use Illuminate\Http\Request;
 
-class MusicController extends Controller
+class SongController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MusicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Music  $music
+     * @param  \App\Models\Song  $Song
      * @return \Illuminate\Http\Response
      */
-    public function show(Music $music)
+    public function show(Song $Song)
     {
         //
     }
@@ -52,10 +52,10 @@ class MusicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Music  $music
+     * @param  \App\Models\Song  $Song
      * @return \Illuminate\Http\Response
      */
-    public function edit(Music $music)
+    public function edit(Song $Song)
     {
         //
     }
@@ -64,10 +64,10 @@ class MusicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Music  $music
+     * @param  \App\Models\Song  $Song
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Music $music)
+    public function update(Request $request, Song $Song)
     {
         //
     }
@@ -75,10 +75,10 @@ class MusicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Music  $music
+     * @param  \App\Models\Song  $Song
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Music $music)
+    public function destroy(Song $Song)
     {
         //
     }
