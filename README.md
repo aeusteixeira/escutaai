@@ -40,3 +40,102 @@ Muito obrigado!
 
 10 - Você teria interesse em fazer parte do projeto assim que a primeira versão da plataforma for ao ar?
 
+# Banco de Dados
+
+- artists
+-- id
+-- name
+-- resume
+-- image
+-- subdomain
+-- type ['solo', 'band']
+-- number_of_members [min:2]
+
+- users
+-- id
+-- name
+-- email
+-- image
+-- password
+
+- type_of _members
+-- name [
+    'vocalist',
+    'guitarist',
+    'bass_player',
+    'drummer',
+    'keyboard_player'
+    'pianist',
+    'trumpeters',
+    'saxophonists'
+]
+
+- artist_has_members
+-- artist_id
+-- member_id
+-- type_id
+
+- artist_has_fans
+-- artist_id
+-- fan_id
+
+- schedule
+-- title
+-- image
+-- description
+-- date
+-- call_to_action [
+    'know more',
+    'access'
+    'secure_ticket'
+    'buy_ticket'
+]
+-- artist_id
+
+- albums
+-- title
+-- description
+-- image
+-- year
+-- artist_id
+
+- musics
+-- title
+-- image
+-- description
+-- duration
+-- album_id
+
+- music_has_members
+-- music_id
+-- member_id
+-- type [
+    'performed',
+    'written',
+    'produced'
+]
+
+- music_has_likes
+-- music_id
+-- fan_id
+
+- comments
+-- content
+-- user_id
+-- parent_id
+-- album_id
+
+- type_of_likes
+-- type [
+    'like',
+    'love',
+    'sad',
+    'awesome'
+    'i_sang_together'
+]
+-- active
+
+- comment_has_likes
+-- type_id
+-- comment_id
+-- user_id
