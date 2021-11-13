@@ -20,6 +20,7 @@ Muito obrigado!
 
 # Perguntas
 1 - Qual é o seu nome?
+2 - Qual é o seu e-mail?
 2 - Qual é o seu nome artístico / nome da sua banda?
 3 - Você é um artista solo ou uma banda?
 	a - Artista solo 
@@ -33,13 +34,22 @@ Muito obrigado!
 - Curiosidades
 - Formulário de contato
 
-5 - Quais outros seções do site você acha que seriam importantes ter na primeira página do seu site?
+5 - Quais outros seções você acha que seriam importantes ter na primeira página do seu site?
 
 6 - Quais dessas páginas você acha interessante ter em seu site
-- 
+- Uma página para blog/ultimas notícias
+- Loja virtual
+- SObre nós
+- Contato
+- Página de integrantes (caso seja banda)
 
-10 - Você teria interesse em fazer parte do projeto assim que a primeira versão da plataforma for ao ar?
+7 - Você tem alguma outra sugestão de página que acabei deixando passar?
 
+8 - O que você acha da plataforma ter um espaço para você ser encontrado por pesquisa de filtro em sua cidade e estado?
+- Acho ótimo!
+- Não acho legal
+
+9 - Você teria interesse em fazer parte do projeto assim que a primeira versão da plataforma for ao ar?
 # Banco de Dados
 
 - artists
