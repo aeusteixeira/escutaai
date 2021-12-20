@@ -10,42 +10,36 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Shopping
+ * Class SongHasLike
  * 
  * @property int $id
- * @property int $product_id
+ * @property int $song_id
  * @property int $user_id
- * @property int $quantity
- * @property float $price
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * 
- * @property Product $product
+ * @property Song $song
  * @property User $user
  *
  * @package App\Models
  */
-class Shopping extends Model
+class SongHasLike extends Model
 {
-	protected $table = 'shoppings';
+	protected $table = 'song_has_likes';
 
 	protected $casts = [
-		'product_id' => 'int',
-		'user_id' => 'int',
-		'quantity' => 'int',
-		'price' => 'float'
+		'song_id' => 'int',
+		'user_id' => 'int'
 	];
 
 	protected $fillable = [
-		'product_id',
-		'user_id',
-		'quantity',
-		'price'
+		'song_id',
+		'user_id'
 	];
 
-	public function product()
+	public function song()
 	{
-		return $this->belongsTo(Product::class);
+		return $this->belongsTo(Song::class);
 	}
 
 	public function user()

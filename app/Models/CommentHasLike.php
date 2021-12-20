@@ -10,42 +10,36 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Shopping
+ * Class CommentHasLike
  * 
  * @property int $id
- * @property int $product_id
+ * @property int $comment_id
  * @property int $user_id
- * @property int $quantity
- * @property float $price
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * 
- * @property Product $product
+ * @property Comment $comment
  * @property User $user
  *
  * @package App\Models
  */
-class Shopping extends Model
+class CommentHasLike extends Model
 {
-	protected $table = 'shoppings';
+	protected $table = 'comment_has_likes';
 
 	protected $casts = [
-		'product_id' => 'int',
-		'user_id' => 'int',
-		'quantity' => 'int',
-		'price' => 'float'
+		'comment_id' => 'int',
+		'user_id' => 'int'
 	];
 
 	protected $fillable = [
-		'product_id',
-		'user_id',
-		'quantity',
-		'price'
+		'comment_id',
+		'user_id'
 	];
 
-	public function product()
+	public function comment()
 	{
-		return $this->belongsTo(Product::class);
+		return $this->belongsTo(Comment::class);
 	}
 
 	public function user()
