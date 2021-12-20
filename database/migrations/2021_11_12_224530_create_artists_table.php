@@ -23,6 +23,7 @@ class CreateArtistsTable extends Migration
             $table->string('subdomain');
             $table->enum('type', ['band', 'soloist']);
             $table->integer('number_of_members')->nullable();
+            $table->string('account')->nullable();
             $table->timestamps();
         });
     }
