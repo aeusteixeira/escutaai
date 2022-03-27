@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class User
- * 
+ *
  * @property int $id
  * @property string $name
  * @property string $email
@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $remember_token
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ *
  * @property Collection|ArtistHasFan[] $artist_has_fans
  * @property Collection|ArtistHasMember[] $artist_has_members
  * @property Collection|CommentHasLike[] $comment_has_likes
@@ -87,4 +87,9 @@ class User extends Model
 	{
 		return $this->hasMany(SongHasMember::class, 'member_id');
 	}
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 }

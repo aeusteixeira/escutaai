@@ -20,10 +20,9 @@ class CreateArtistsTable extends Migration
             $table->text('history')->nullable();
             $table->boolean('has_logo')->default(false);
             $table->string('logo_path')->nullable();
-            $table->string('subdomain');
+            $table->string('account');
             $table->enum('type', ['band', 'soloist']);
             $table->integer('number_of_members')->nullable();
-            $table->string('account')->nullable();
             $table->timestamps();
         });
     }

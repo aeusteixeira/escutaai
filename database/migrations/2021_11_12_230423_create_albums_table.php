@@ -19,7 +19,7 @@ class CreateAlbumsTable extends Migration
             $table->string('slug')->unique();
             $table->string('description');
             $table->string('image');
-            $table->year('year');
+            $table->string('year');
 
             $table->unsignedBigInteger('artist_id');
             $table->foreign('artist_id')->references('id')->on('artists')->onDelete('cascade');

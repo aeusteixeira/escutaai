@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Song
- * 
+ *
  * @property int $id
  * @property string $title
  * @property string $image
@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $album_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ *
  * @property Album $album
  * @property Collection|SongHasLike[] $song_has_likes
  * @property Collection|SongHasMember[] $song_has_members

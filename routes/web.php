@@ -1,6 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    AccountController,
+    MainController,
+    ArtistController,
+    FanController,
+    MemberController,
+    SongController,
+    CommentController,
+    ShoppingController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +25,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::group(['prefix' => '/', 'as' => 'main.'], function () {
+    Route::get('/', [MainController::class, 'index'])->name('index');
+});
+
+
+Route::group(['prefix' => '{account}', 'as' => 'account.'], function () {
+    Route::get('/', [AccountController::class, 'index'])->name('index');
+});
+
+Route::group(['prefix' => '{account}/dashboard', 'as' => 'account.dashboard.'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });

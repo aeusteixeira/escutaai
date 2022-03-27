@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Artist
- * 
+ *
  * @property int $id
  * @property string $name
  * @property string $resume
@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $account
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ *
  * @property Collection|Album[] $albums
  * @property Collection|ArtistHasFan[] $artist_has_fans
  * @property Collection|ArtistHasMember[] $artist_has_members
@@ -49,10 +49,9 @@ class Artist extends Model
 		'history',
 		'has_logo',
 		'logo_path',
-		'subdomain',
+		'account',
 		'type',
 		'number_of_members',
-		'account'
 	];
 
 	public function albums()
