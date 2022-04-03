@@ -31,16 +31,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResources([
-    'users' => UserController::class,
-    'accounts' => AccountController::class,
-    'albums' => AlbumController::class,
-    'artists' => ArtistController::class,
-    'categorys' => CategoryController::class,
-    'comments' => CommentController::class,
-    'products' => ProductController::class,
-    'shoppings' => ShoppingController::class,
-    'songs' => SongController::class,
-    'type-of-likes' => TypeOfLikesController::class,
-    'type-of-members' => TypeOfMembersController::class,
-]);
+Route::group(['prefix' => 'v1'], function () {
+    Route::apiResources([
+        'users' => UserController::class,
+        'accounts' => AccountController::class,
+        'albums' => AlbumController::class,
+        'artists' => ArtistController::class,
+        'categorys' => CategoryController::class,
+        'comments' => CommentController::class,
+        'products' => ProductController::class,
+        'shoppings' => ShoppingController::class,
+        'songs' => SongController::class,
+        'type-of-likes' => TypeOfLikesController::class,
+        'type-of-members' => TypeOfMembersController::class,
+    ]);
+});
