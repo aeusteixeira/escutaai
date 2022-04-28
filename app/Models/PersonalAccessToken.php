@@ -8,10 +8,11 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class PersonalAccessToken
- * 
+ *
  * @property int $id
  * @property string $tokenable_type
  * @property int $tokenable_id
@@ -26,6 +27,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class PersonalAccessToken extends Model
 {
+    use HasFactory;
 	protected $table = 'personal_access_tokens';
 
 	protected $casts = [

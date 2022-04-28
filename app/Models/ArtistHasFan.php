@@ -8,16 +8,17 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class ArtistHasFan
- * 
+ *
  * @property int $id
  * @property int $artist_id
  * @property int $fan_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ *
  * @property Artist $artist
  * @property User $user
  *
@@ -25,6 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ArtistHasFan extends Model
 {
+    use HasFactory;
 	protected $table = 'artist_has_fans';
 
 	protected $casts = [

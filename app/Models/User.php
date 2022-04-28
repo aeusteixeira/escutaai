@@ -8,7 +8,9 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 /**
  * Class User
@@ -24,16 +26,16 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property Collection|ArtistHasFan[] $artist_has_fans
  * @property Collection|ArtistHasMember[] $artist_has_members
- * @property Collection|CommentHasLike[] $comment_has_likes
  * @property Collection|Comment[] $comments
+ * @property Collection|Like[] $likes
  * @property Collection|Shopping[] $shoppings
- * @property Collection|SongHasLike[] $song_has_likes
  * @property Collection|SongHasMember[] $song_has_members
  *
  * @package App\Models
  */
-class User extends Model
+class User extends Authenticatable
 {
+    use HasFactory, Notifiable;
 	protected $table = 'users';
 
 	protected $dates = [
@@ -63,14 +65,14 @@ class User extends Model
 		return $this->hasMany(ArtistHasMember::class, 'member_id');
 	}
 
-	public function comment_has_likes()
-	{
-		return $this->hasMany(CommentHasLike::class);
-	}
-
 	public function comments()
 	{
 		return $this->hasMany(Comment::class);
+	}
+
+	public function likes()
+	{
+		return $this->hasMany(Like::class);
 	}
 
 	public function shoppings()
@@ -78,18 +80,8 @@ class User extends Model
 		return $this->hasMany(Shopping::class);
 	}
 
-	public function song_has_likes()
-	{
-		return $this->hasMany(SongHasLike::class);
-	}
-
 	public function song_has_members()
 	{
 		return $this->hasMany(SongHasMember::class, 'member_id');
 	}
-
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
 }

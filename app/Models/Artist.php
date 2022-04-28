@@ -9,6 +9,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Artist
@@ -19,13 +20,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $history
  * @property bool $has_logo
  * @property string|null $logo_path
- * @property string $subdomain
- * @property string $type
+ * @property string $account
+ * @property int $type_of_artist_id
  * @property int|null $number_of_members
- * @property string|null $account
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
+ * @property TypeOfArtist $type_of_artist
  * @property Collection|Album[] $albums
  * @property Collection|ArtistHasFan[] $artist_has_fans
  * @property Collection|ArtistHasMember[] $artist_has_members
@@ -36,10 +37,12 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Artist extends Model
 {
+    use HasFactory;
 	protected $table = 'artists';
 
 	protected $casts = [
 		'has_logo' => 'bool',
+		'type_of_artist_id' => 'int',
 		'number_of_members' => 'int'
 	];
 
@@ -50,9 +53,14 @@ class Artist extends Model
 		'has_logo',
 		'logo_path',
 		'account',
-		'type',
-		'number_of_members',
+		'type_of_artist_id',
+		'number_of_members'
 	];
+
+	public function type_of_artist()
+	{
+		return $this->belongsTo(TypeOfArtist::class);
+	}
 
 	public function albums()
 	{

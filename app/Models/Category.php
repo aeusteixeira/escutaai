@@ -9,10 +9,11 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Category
- * 
+ *
  * @property int $id
  * @property string $name
  * @property string $slug
@@ -22,7 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $artist_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * 
+ *
  * @property Artist $artist
  * @property Collection|Product[] $products
  *
@@ -30,6 +31,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Category extends Model
 {
+    use HasFactory;
 	protected $table = 'categories';
 
 	protected $casts = [

@@ -8,10 +8,11 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class FailedJob
- * 
+ *
  * @property int $id
  * @property string $uuid
  * @property string $connection
@@ -24,6 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class FailedJob extends Model
 {
+    use HasFactory;
 	protected $table = 'failed_jobs';
 	public $timestamps = false;
 

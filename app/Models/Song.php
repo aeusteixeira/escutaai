@@ -9,6 +9,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Song
@@ -23,13 +24,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon|null $updated_at
  *
  * @property Album $album
- * @property Collection|SongHasLike[] $song_has_likes
  * @property Collection|SongHasMember[] $song_has_members
  *
  * @package App\Models
  */
 class Song extends Model
 {
+    use HasFactory;
 	protected $table = 'songs';
 
 	protected $casts = [
@@ -51,11 +52,6 @@ class Song extends Model
 	public function album()
 	{
 		return $this->belongsTo(Album::class);
-	}
-
-	public function song_has_likes()
-	{
-		return $this->hasMany(SongHasLike::class);
 	}
 
 	public function song_has_members()

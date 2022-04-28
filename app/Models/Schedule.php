@@ -8,10 +8,11 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class Schedule
- * 
+ *
  * @property int $id
  * @property string $title
  * @property string $description
@@ -26,6 +27,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Schedule extends Model
 {
+    use HasFactory;
 	protected $table = 'schedules';
 
 	protected $dates = [
