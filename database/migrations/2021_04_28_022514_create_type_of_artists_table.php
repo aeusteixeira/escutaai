@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommentHasLikesTable extends Migration
+class CreateTypeOfArtistsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateCommentHasLikesTable extends Migration
      */
     public function up()
     {
-        Schema::create('comment_has_likes', function (Blueprint $table) {
+        Schema::create('type_of_artists', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('comment_id');
-            $table->unsignedBigInteger('user_id');
-
-            $table->foreign('comment_id')->references('id')->on('comments');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('title');
+            $table->string('icon');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateCommentHasLikesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment_has_likes');
+        Schema::dropIfExists('type_of_artists');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSongHasLikesTable extends Migration
+class CreateLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateSongHasLikesTable extends Migration
      */
     public function up()
     {
-        Schema::create('song_has_likes', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('song_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('type_like_id');
+            $table->morphs('likeable');
 
-            $table->foreign('song_id')->references('id')->on('songs')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('type_like_id')->references('id')->on('type_of_likes')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateSongHasLikesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Song_has_likes');
+        Schema::dropIfExists('likes');
     }
 }

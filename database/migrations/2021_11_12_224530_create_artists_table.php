@@ -21,8 +21,10 @@ class CreateArtistsTable extends Migration
             $table->boolean('has_logo')->default(false);
             $table->string('logo_path')->nullable();
             $table->string('account');
-            $table->enum('type', ['band', 'soloist']);
+            $table->unsignedBigInteger('type_of_artist_id');
             $table->integer('number_of_members')->nullable();
+
+            $table->foreign('type_of_artist_id')->references('id')->on('type_of_artists')->onDelete('cascade');
             $table->timestamps();
         });
     }

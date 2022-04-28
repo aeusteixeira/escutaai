@@ -15,13 +15,17 @@ class CreateShoppingsTable extends Migration
     {
         Schema::create('shoppings', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->unsignedBigInteger('event_id')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->integer('quantity');
             $table->decimal('price', 10, 2);
+            $table->json('data');
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
